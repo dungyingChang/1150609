@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>搜尋結果</title>
+
+<style>
+
+body{
+    background-image: url('/images/sea.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    font-family:Arial;
+    text-align:center;
+}
+
+.card{
+    width:700px;
+    margin:auto;
+    margin-top:50px;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:0px 0px 20px gray;
+}
+
+img{
+    width:350px;
+    border-radius:15px;
+}
+
+h2{
+    color:#0066cc;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h2 th:text="${name}"></h2>
+
+<img th:src="@{/images/{img}(img=${image})}">
+
+<p>
+<strong>介紹：</strong>
+<span th:text="${description}"></span>
+</p>
+
+<p>
+<strong>棲息地：</strong>
+<span th:text="${habitat}"></span>
+</p>
+
+<a href="/">回首頁</a>
+
+</div>
+
+</body>
+</html>
